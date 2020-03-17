@@ -1,0 +1,26 @@
+{
+  "version": 8,
+  "task": {
+    "DocumentClassificationTask": {
+      "data": {
+        "source": {
+          "TSVDataSource": {
+            "field_names": ["label", "text"],
+            "train_filename": "poets_train.tsv",
+            "test_filename": "poets_testing.tsv",
+            "eval_filename": "poets_testing.tsv"
+          }
+        }
+      },
+      "model": {
+        "DocModel": {
+          "representation": {
+            "DocNNRepresentation": {}
+          }
+        }
+      }
+    }
+  },
+  "export_torchscript_path": "models/new_docnn.pt1",
+  "export_caffe2_path": "models/model.caffe2.predictor"
+}
